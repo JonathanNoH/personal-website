@@ -5,16 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
   <title>Personal Website</title>
 </head>
 <body>
   <header>
     <h1>First Last</h1>
+
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+
     <nav>
-      <a href="#">Projects</a>
-      <a href="#">About</a>
-      <a href="#">Skills</a>
-      <a href="#">Contact</a>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Skills</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main>
