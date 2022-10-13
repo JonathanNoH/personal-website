@@ -1,3 +1,5 @@
+// adaptive nav
+
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
@@ -11,4 +13,12 @@ navToggle.addEventListener('click', () => {
     primaryNav.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
   }
+});
+
+
+// slider
+const slider = new A11YSlider(document.querySelector('.slider'), {
+  autoplay: true,
+  autoplaySpeed: 4000,
+  dots: true,
 });
