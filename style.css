@@ -142,6 +142,16 @@ header {
   padding: var(--padding);
 }
 
+@media (min-width: 40em) {
+  header {
+    box-shadow: 0 4px 8px rgb(199, 199, 199);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+  }
+}
+
 .mobile-nav-toggle {
   display: none;
 }
@@ -168,7 +178,7 @@ header {
     inset: 0 0 0 30%;
 
     flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
+    padding: max(30vh, 10rem) 2em;
 
     transform: translateX(100%);
     transition: transform 350ms ease-out;
@@ -178,9 +188,13 @@ header {
     transform: translateX(0%);
   }
 
+  header {
+    position: relative;
+  }
+
   .mobile-nav-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     background: url("assets/menu.svg");
     background-repeat: no-repeat;
