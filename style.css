@@ -98,7 +98,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--h1);
   text-shadow: 2px 2px 12px rgb(44, 44, 44);
 }
 
@@ -118,15 +118,28 @@ h1 {
 :root {
   --padding: 2rem;
   --gap: 2rem;
+  --margin: 2rem;
+  --h1: 3rem;
 }
 
 body {
   overflow-x: hidden;
 }
 
+
+h2 {
+  text-align: center;
+  margin: var(--margin);
+}
+
 a {
   text-decoration: none;
   color: black;
+}
+
+/* make scrolling account for header */
+section {
+  scroll-margin-top: calc(var(--padding)*2 + var(--h1) + var(--margin));
 }
 
 /* END GENERAL */
@@ -224,10 +237,7 @@ main {
   padding: var(--padding);
 }
 
-.projects h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+/* PROJECTS */
 
 .project-card {
   display: flex;
@@ -261,5 +271,13 @@ main {
   height: 12rem;
   color: var(--white);
 }
+
+/* END PROJECTS */
+
+/* ABOUT */
+
+
+
+/* END ABOUT */
 
 /* END MAIN */
