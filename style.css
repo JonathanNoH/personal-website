@@ -194,69 +194,58 @@ header {
 
 /* END HEADER */
 
-/* SLIDER */
+/* SWIPERJS SLIDER */
 
-.slider {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.slider > * {
+.swiper {
   width: 100%;
-  flex: 0 0 auto;
+  height: 440px;
 }
 
-@media (min-width: 40em) {
-  .a11y-slider-container {
-    margin-inline: 0;
-  }
-  .slider > * {
-    width: 50%;
-  }
-}
 
-@media (min-width: 55em) {
-  .slider > * {
-    width: 37%;
-  }
-}
-
-.a11y-slider-dots {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.a11y-slider-dots li {
-  display: block;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-}
-
-.a11y-slider-dots li button {
-  display: block;
-  font-size: 0;
-  text-indent: -9999px;
-  border: 1px solid !important;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-}
-
-.a11y-slider-dots li button.active {
-  background: black;
-}
-
-/* END SLIDER */
+/* END SWIPERJS SLIDER */
 
 /* MAIN */
 
 main {
   padding: var(--padding);
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    box-shadow: 0 4px 8px rgb(199, 199, 199);
+  }
+}
+
+.project-card .flex-container {
+  display: flex;
+}
+
+.project-card .link-container {
+  margin-left: auto;
+}
+
+.project-card .flex-container,
+.project-card p {
+  padding: 1rem;
+}
+
+.project-img {
+  font-family: "Playfair Display";
+  text-align: center;
+  font-size: 2rem;
+  height: 12rem;
+  color: var(--white);
 }
 
 /* END MAIN */

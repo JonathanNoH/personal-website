@@ -15,10 +15,27 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-
-// slider
-const slider = new A11YSlider(document.querySelector('.slider'), {
-  autoplay: true,
-  autoplaySpeed: 4000,
-  dots: true,
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+    }
+  },
+  centeredSlides: true,
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
