@@ -3,7 +3,8 @@
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
-navToggle.addEventListener('click', () => {
+navToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
   const visibility = primaryNav.getAttribute('data-visible');
 
   if (visibility === "false") {
@@ -14,6 +15,13 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', false);
   }
 });
+
+document.documentElement.addEventListener('click', (e) => {
+  if (!primaryNav.contains(e.target) && primaryNav.getAttribute('data-visible') === 'true') {
+    primaryNav.setAttribute('data-visible', false);
+    navToggle.setAttribute('aria-expanded', false);
+  }
+})
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
