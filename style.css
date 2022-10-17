@@ -333,11 +333,30 @@ section:not(:first-child)::before {
   .skill-category-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
 
 /* END SKILLS */
 
+
+/* CONTACT */
+
+.contact-container {
+  background: grey;
+  padding: 1rem;
+}
+
+.contact-container a {
+  color: white;
+}
+
+.single-contact {
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+/* END CONTACT */
 
 /* END MAIN */
