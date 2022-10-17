@@ -137,6 +137,10 @@ a {
   color: black;
 }
 
+.tab {
+  margin-left: 2rem;
+}
+
 /* make scrolling account for header */
 section {
   scroll-margin-top: calc(var(--padding)*2 + var(--h1) + var(--margin));
@@ -304,7 +308,18 @@ section:not(:first-child)::before {
 
 /* ABOUT */
 
+.about {
+  display: flex;
+  justify-content: center;
+}
 
+.about h2 {
+  margin-top: 0;
+}
+
+.about-p {
+  max-width: 70ch;
+}
 
 /* END ABOUT */
 
